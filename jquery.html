@@ -2,21 +2,39 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>jQuery基礎</title>
-		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<style>
-			.text1 {
-			background: red;
-			}
-		</style>
+		<title>alert</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 		<script>
-			$(function() {
-					$(".text1").removeClass("text2 text3");
+			$(function(){
+				$("#click").click(function(){
+					alert("クリック!!");
+				});		
+
+				$("[name=change]").change(function(){
+					alert("変更!!");
+				});		
+
+				$("form").submit(function(){
+					alert("フォームがsubmitされました!!");
+				});
+				
+				$(".onmouse").mouseover(function(){
+					$(".message").html("マウスが乗っています!!");
+				});		
+
+				$(".onmouse").mouseout(function(){
+					$(".message").html("マウスがはずれました!!");
+				});		
 			});
 		</script>
 	</head>
 	<body>
-		<div class="text"><span>text</span></div>
-		<div class="text1 text2 text3"><span>text1</span></div>
+		<form>
+			<input type="text" name="change" value="テキストを変更してください。" size="50">
+			<button type="button" id="click">クリックしてください</button>
+			<button type="submit">送信</button>
+		</form>
+		<div class="message">マウスが乗っていません。</div>
+		<div class="onmouse" style="width:300px; height:100px; background-color: #EEEEEE;">マウスを乗せてください</div>
 	</body>
 </html>
