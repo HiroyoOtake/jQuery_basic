@@ -2,27 +2,22 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>jQuery利用</title>
-		<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-		<!-- <script src="./jquery.min.js"></script> ← ダウンロードしてこれでもいい-->
+		<title>jQuery基礎</title>
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<style>
+			.class1 {
+			background: red;
+			}
+		</style>
 		<script>
-			$(function(){
-			$("#alert").click(function() {
-			$("div").html("変更後のテキスト！！");
-			alert("変更しました");
-			});
+			$(function()
+			{
+				console.log($(".text"));
 			});
 		</script>
 	</head>
 	<body>
-		<button id="alert">CLICK</button>
-		<div>
-			変更前のテキスト<br>
-			ここの文字が変更されます。<br>
-		</div>
-		<div>
-			変更前のテキスト<br>
-			ここの文字が変更されます。<br>
-		</div>
+		<div class="text"><span>text</span></div>
+		<div class="text1"><span>text1</span></div>
 	</body>
 </html>
