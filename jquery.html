@@ -10,9 +10,9 @@
 			}
 		</style>
 		<script>
-			$(function()
-			{
-				console.log($(".text"));
+			$(function() {
+				console.log($(".text").html());
+				console.log($(".text").html("<p>変更するテキスト</p>"));
 			});
 		</script>
 	</head>
