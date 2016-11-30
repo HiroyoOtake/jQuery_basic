@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery利用</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script>
+			$(function(){
+			$("#alert").click(function() {
+			$("div").html("変更後のテキスト！！");
+			alert("変更しました");
+			});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="alert">CLICK</button>
+		<div>
+			変更前のテキスト<br>
+			ここの文字が変更されます。<br>
+		</div>
+		<div>
+			変更前のテキスト<br>
+			ここの文字が変更されます。<br>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery利用なし</title>
+		<script>
+			window.onload = function() {
+			document.getElementById("alert").addEventListener("click", function( event  ) {
+			var elems = document.getElementsByTagName("div");
+			for (var i = 0; i < elems.length; i++) {
+			elems[i].innerHTML = "変更後のテキスト！！";
+			}
+			alert("変更しました");
+			}, false);
+			}
+		</script>
+	</head>
+	<body>
+		<button id="alert">CLICK</button>
+		<div>
+		変更前のテキスト<br>
+		ここの文字が変更されます。<br>
+		</div>
+		<div>
+		変更前のテキスト<br>
+		ここの文字が変更されます。<br>
+		</div>
+	</body>
+</html>
