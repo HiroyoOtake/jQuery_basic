@@ -6,35 +6,16 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 		<script>
 			$(function(){
-				$("#click").click(function(){
-					alert("クリック!!");
-				});		
-
-				$("[name=change]").change(function(){
-					alert("変更!!");
-				});		
-
-				$("form").submit(function(){
-					alert("フォームがsubmitされました!!");
+				$("a").click(function(event){
+					event.preventDefault();
+					alert("クリック");
 				});
-				
-				$(".onmouse").mouseover(function(){
-					$(".message").html("マウスが乗っています!!");
-				});		
-
-				$(".onmouse").mouseout(function(){
-					$(".message").html("マウスがはずれました!!");
-				});		
 			});
 		</script>
 	</head>
 	<body>
-		<form>
-			<input type="text" name="change" value="テキストを変更してください。" size="50">
-			<button type="button" id="click">クリックしてください</button>
-			<button type="submit">送信</button>
-		</form>
-		<div class="message">マウスが乗っていません。</div>
-		<div class="onmouse" style="width:300px; height:100px; background-color: #EEEEEE;">マウスを乗せてください</div>
+		<a href="http://google.com">Googleに移動</a>
+		<div style="height: 2000px;"></div>
+		<a href="#">移動</a>
 	</body>
 </html>
